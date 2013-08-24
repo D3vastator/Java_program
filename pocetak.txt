@@ -1,0 +1,18 @@
+package me.lukarolak.paket;
+import java.util.logging.Logger;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+
+public class spawn extends JavaPlugin {
+	public final Logger logger = Logger.getLogger("Minecraft");
+		public void onEnable() {
+				logger.info(" ");
+				logger.info("Luka plugin has been enabled");
+				logger.info(" ");
+				}
+			public void onDisable() {
+				logger.info("Luka plugin has been disabled");
+				}
+			
+}
