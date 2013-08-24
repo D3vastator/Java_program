@@ -1,0 +1,8 @@
+name: plugin
+main: me.Bench3.youtube.Youtube
+version: 1.0
+description: >
+             Youtube Plugin.
+commands:
+  sendme:
+    description: Sent!
