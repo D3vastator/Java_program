@@ -1,0 +1,48 @@
+package me.lukarolak.RTD;
+import java.util.logging.Logger;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+
+public class TheDice extends JavaPlugin{
+	public final Logger logger = Logger.getLogger("Minecraft");
+		public void onEnable() {
+				logger.info(" ");
+				logger.info("RTD plugin has been enabled");
+				logger.info(" ");
+				
+				}
+			public void onDisable() {
+				logger.info("RTD plugin has been disabled");
+				}
+			boolean farmer = false;
+			boolean warrior = false;
+			boolean miner = false;
+			public boolean onCommand(CommandSender sender,Command cmd,String commandLabel,String[] args){
+				Player player = (Player) sender;
+				if (commandLabel.equalsIgnoreCase("RTD")){
+					int randomnumber=(int) Math.floor(Math.random()*4);{
+						if (randomnumber==1 && farmer == false){
+							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a farmer");
+							farmer = true;
+							}
+						else randomnumber = 2;
+						if (randomnumber==2 && warrior == false){
+							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a warrior");
+							warrior = true;
+						}
+						else randomnumber = 3;
+						if (randomnumber==3 && miner == false){
+							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a miner");
+							miner = true;
+						}
+						else randomnumber = 1;
+					}
+				}
+				return false;
+			}
+}
