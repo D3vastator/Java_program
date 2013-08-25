@@ -1,0 +1,7 @@
+name: // naziv java plugina
+main: // naziv paketa + klase odnosno srca koda
+version: // verzija
+description: // opæeniti opis plugina
+commands: // u sljedeæi red se piše "  "+naredba
+  sendme:
+    description: //"    "+ opis naredbe
