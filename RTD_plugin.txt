@@ -23,29 +23,28 @@ public class TheDice extends JavaPlugin{
 			boolean warrior = false;
 			boolean miner = false;
 			String a = null;
+			int randomnumber=(int) Math.floor(Math.random()*4);
 			public boolean onCommand(CommandSender sender,Command cmd,String commandLabel,String[] args){
 				Player player = (Player) sender;
-				int randomnumber=(int) Math.floor(Math.random()*4);{
 				if (commandLabel.equalsIgnoreCase("RTD") && a!=player.getDisplayName()){
-						a = player.getDisplayName();
-						if (randomnumber==1 && farmer == false){
-							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a farmer");
-							farmer = true;
-							}
-						else randomnumber = 2;
-						if (randomnumber==2 && warrior == false){
-							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a warrior");
-							warrior = true;
+					a = player.getDisplayName();
+					if (randomnumber==1 && farmer == false){
+						player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a farmer");
+						farmer = true;
 						}
-						else randomnumber = 3;
-						if (randomnumber==3 && miner == false){
-							player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a miner");
-							miner = true;
+					else randomnumber = 2;
+					if (randomnumber==2 && warrior == false){
+						player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a warrior");
+						warrior = true;
 						}
-						else randomnumber = 1;
-					}
-				else player.sendMessage(ChatColor.BLUE+"[Server] you have allready used RTD command");
+					else randomnumber = 3;
+					if (randomnumber==3 && miner == false){
+						player.sendMessage(ChatColor.BLUE+"[Server] you have been elected as a miner");
+						miner = true;
+						}
+					else randomnumber = 1;
 				}
+				else player.sendMessage(ChatColor.BLUE+"[Server] you have allready used RTD command");
 				return false;
 			}
 }
